@@ -8,6 +8,23 @@ and export back to the standard `.lvl` format.
 This project is forked from `mas-lvlr` by `cluplau`:
 <https://github.com/cluplau/mas-lvlr>
 
+## GitHub Pages
+
+Use the hosted app here:
+
+<https://danielzenflow.github.io/AIMS-Level-Workbench/>
+
+The app is configured for static deployment on GitHub Pages. Deployment runs
+automatically from `.github/workflows/deploy.yml` when changes are pushed to
+`main`. The workflow builds with:
+
+```powershell
+pnpm build
+```
+
+and sets `BASE_PATH=/AIMS-Level-Workbench` so assets load correctly from the
+GitHub Pages project URL.
+
 ## Features
 
 - Edit hospital-domain `.lvl` files in a visual grid.
@@ -42,9 +59,9 @@ have the same number of rows.
 The editor can still create syntactically valid but unsolved or invalid levels.
 Test finished levels with MAvis/server tooling before relying on them.
 
-## Quick Start
+## Local Quick Start
 
-From this repository:
+To run from a cloned or downloaded source copy:
 
 ```powershell
 corepack enable
@@ -86,22 +103,6 @@ pnpm preview
 ```
 
 `pnpm` is preferred because this repository includes `pnpm-lock.yaml`.
-
-## GitHub Pages
-
-The app is configured for static deployment on GitHub Pages:
-
-<https://danielzenflow.github.io/AIMS-Level-Workbench/>
-
-Deployment runs automatically from `.github/workflows/deploy.yml` when changes
-are pushed to `main`. The workflow builds with:
-
-```powershell
-pnpm build
-```
-
-and sets `BASE_PATH=/AIMS-Level-Workbench` so assets load correctly from the
-GitHub Pages project URL.
 
 ## Project Structure
 
