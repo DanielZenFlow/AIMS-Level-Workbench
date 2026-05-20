@@ -1,13 +1,5 @@
 /* AIMS Level Workbench - styles match replay-viewer */
 
-@font-face {
-  font-family: 'MavisMono';
-  src: url('/fonts/DejaVuSansMono-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: block;
-}
-
 :root {
   --cell: 22px;
   --axis: 28px;

@@ -58,6 +58,10 @@ Then open:
 http://127.0.0.1:5173
 ```
 
+`5173` is the default Vite development port used by `pnpm start`. If that port
+is already busy, Vite may use the next available port, such as `5174`. Always
+use the local URL printed in the terminal.
+
 On Windows, you can also use:
 
 ```powershell
@@ -82,6 +86,22 @@ pnpm preview
 ```
 
 `pnpm` is preferred because this repository includes `pnpm-lock.yaml`.
+
+## GitHub Pages
+
+The app is configured for static deployment on GitHub Pages:
+
+<https://danielzenflow.github.io/AIMS-Level-Workbench/>
+
+Deployment runs automatically from `.github/workflows/deploy.yml` when changes
+are pushed to `main`. The workflow builds with:
+
+```powershell
+pnpm build
+```
+
+and sets `BASE_PATH=/AIMS-Level-Workbench` so assets load correctly from the
+GitHub Pages project URL.
 
 ## Project Structure
 
